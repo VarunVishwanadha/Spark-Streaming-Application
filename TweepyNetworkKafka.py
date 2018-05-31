@@ -1,4 +1,3 @@
-from __future__ import print_function
 import tweepy
 import json
 import pykafka
@@ -16,8 +15,6 @@ class KafkaListener(tweepy.streaming.StreamListener):
             tweet_json = json.loads(data)
             hashtags = tweet_json['entities']['hashtags']
             if len(hashtags) > 0:
-                print("  -  ".join([str(hashtag['text']) for hashtag in hashtags]))
-                print(tweet_json['text'])
                 self.producer.produce(bytes(data, "ascii"))
         return True
                                                                                                                                            
