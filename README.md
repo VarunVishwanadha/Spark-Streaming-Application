@@ -2,7 +2,8 @@
 Getting hashtag counts from live Twitter Stream using Spark Streaming and Apache Kafka.
 
 
-# Steps to run the application. Replace the paths with correct installation paths.
+
+Steps to run the application. Replace the paths with correct installation paths.
 
 1. Start Apache Kafka
 ~/Softwares/kafka_2.11-1.1.0/bin/kafka-server-start.sh ~/Softwares/kafka_2.11-1.1.0/config/server.properties
